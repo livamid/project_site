@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everything - Подробнее</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+            color: #d4d4dc;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: #21243d;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        header h1 {
+            color: #ffcc00;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(33, 36, 61, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            flex-grow: 1;
+        }
+
+        .container h2 {
+            color: #ffcc00;
+            margin-bottom: 20px;
+        }
+
+        .container p {
+            margin-bottom: 20px;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .feature {
+            flex: 1 1 calc(50% - 20px);
+            background: rgba(43, 45, 66, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            background-color: #ffcc00;
+            color: #1e1e2f;
+        }
+
+        .tabs {
+            margin-top: 30px;
+        }
+
+        .tab-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tab-buttons button {
+            padding: 10px 20px;
+            background: #2b2d42;
+            color: #ffcc00;
+            border: 1px solid #ffcc00;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .tab-buttons button:hover {
+            background: #ff9900;
+            color: #fff;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .image {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        .tab-buttons button.active {
+            background: #ff9900;
+            color: #fff;
+        }
+
+        /* Стили для кнопки на главную */
+        .back-to-home-btn {
+            display: inline-block;
+            background-color: #ffcc00;
+            color: #1e1e2f;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            text-align: center;
+            margin-top: 20px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .back-to-home-btn:hover {
+            background-color: #ff9900;
+            transform: scale(1.1); /* Увеличиваем кнопку при наведении */
+        }
+
+        /* Стиль для ссылки на сайт */
+        .official-site {
+            display: inline-block;
+            background-color: #ffcc00;
+            color: #1e1e2f;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            margin-top: 20px;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .official-site:hover {
+            background-color: #ff9900;
+            transform: scale(1.05);
+        }
+
+        /* Стиль для инструкции */
+        .download-instructions {
+            background: rgba(43, 45, 66, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            margin-top: 30px;
+        }
+
+        .download-instructions h3 {
+            color: #ffcc00;
+        }
+
+        .download-instructions p {
+            color: #d4d4dc;
+        }
+
+        /*Стиль для подвала */
+        footer {
+            background-color: #21243d;
+            color: #d4d4dc;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+        }
+
+        /* фото внизу страницы */
+        .bottom-image {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .bottom-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="side-column left-column"></div>
+<div class="side-column right-column"></div>
+
+    <header>
+        <h1>Подробнее о Everything</h1>
+    </header>
+    <div class="image">
+        <img src="every1.png" alt="Изображение сверху">
+    </div>
+    <main class="container">
+        <h2>Что такое Everything?</h2>
+        <p>Everything — это сверхбыстрая и легкая программа для поиска файлов и папок на вашем компьютере. Она позволяет находить нужные данные за считанные секунды благодаря мгновенной индексации файловой системы.</p>
+
+        <div class="features">
+            <div class="feature">
+                <h3>Молниеносный поиск</h3>
+                <p>Everything индексирует файлы практически мгновенно, предоставляя доступ к результатам поиска за доли секунды.</p>
+            </div>
+            <div class="feature">
+                <h3>Минимальная нагрузка</h3>
+                <p>Программа занимает минимальное количество ресурсов, обеспечивая стабильную работу даже на слабых устройствах.</p>
+            </div>
+            <div class="feature">
+                <h3>Интуитивный интерфейс</h3>
+                <p>Простой и удобный интерфейс делает использование программы комфортным даже для новичков.</p>
+            </div>
+            <div class="feature">
+                <h3>Фильтрация результатов</h3>
+                <p>Вы можете искать файлы по типу, размеру, дате изменения и другим параметрам, что делает поиск еще более точным.</p>
+            </div>
+        </div>
+
+        <div class="tabs">
+            <div class="tab-buttons">
+                <button onclick="showTab('advantages')" class="active">Преимущества</button>
+                <button onclick="showTab('use-cases')">Примеры использования</button>
+                <button onclick="showTab('tips')">Советы по использованию</button>
+            </div>
+
+            <div id="advantages" class="tab-content active">
+                <h3>Преимущества Everything</h3>
+                <ul>
+                    <li>Мгновенный доступ к результатам поиска.</li>
+                    <li>Отсутствие лишней рекламы и всплывающих окон.</li>
+                    <li>Поддержка работы с сетевыми дисками.</li>
+                    <li>Полностью бесплатное использование.</li>
+                </ul>
+            </div>
+
+            <div id="use-cases" class="tab-content">
+                <h3>Примеры использования Everything</h3>
+                <ul>
+                    <li>Поиск потерянных файлов по ключевым словам.</li>
+                    <li>Ускорение работы в больших проектах с множеством файлов.</li>
+                    <li>Навигация по сетевым и локальным дискам.</li>
+                    <li>Использование фильтров для быстрого нахождения изображений, видео или документов.</li>
+                </ul>
+            </div>
+
+            <div id="tips" class="tab-content">
+                <h3>Советы по использованию</h3>
+                <ul>
+                    <li>Используйте горячие клавиши для быстрого доступа к поиску.</li>
+                    <li>Настройте индексацию только для нужных папок, чтобы ускорить работу программы.</li>
+                    <li>Добавьте Everything в автозапуск, чтобы оно было всегда под рукой.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="download-instructions">
+            <h3>Как скачать Everything</h3>
+            <p>Чтобы скачать программу Everything, выполните следующие шаги:</p>
+            <ol>
+                <li>Перейдите на <a href="https://www.voidtools.com/" target="_blank" style="color: #ffcc00;">официальный сайт Everything</a>.</li>
+                <li>Нажмите на кнопку "Download" для скачивания последней версии программы.</li>
+                <li>Выберите нужную версию для вашей операционной системы (например, 32-bit или 64-bit).</li>
+                <li>После скачивания запустите установочный файл и следуйте инструкциям на экране.</li>
+            </ol>
+        </div>
+        <a href="index.html" class="back-to-home-btn">На главную</a>
+    </main>
+    <div class="bottom-image">
+        <img src="every2.jpg" alt="Изображение снизу">
+    </div>
+    <footer>
+        <p>&copy; 2025 Полезные утилиты для ПК</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,502 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* Стили для блока введения */
+.intro {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(33, 36, 61, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.intro h2 {
+    margin: 0 0 20px;
+    color: #ffcc00;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.intro p {
+    margin: 0 0 20px;
+    font-size: 1.1em;
+}
+
+.intro img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .intro {
+        padding: 15px;
+    }
+
+    .intro h2 {
+        font-size: 1.8em;
+    }
+
+    .intro p {
+        font-size: 1em;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #21243d, #2b2d42);
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s ease infinite;
+    color: #d4d4dc;
+    line-height: 1.6;
+    
+}
+
+/* Анимация градиента для фона */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Стили для шапки */
+header {
+    background: #21243d;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #ffcc00;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Общие стили для ссылок */
+a {
+    color: #ffcc00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    text-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
+}
+
+a:hover {
+    color: #ff9900;
+}
+
+/* Список программ */
+.programs-list {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.program {
+    background: rgba(33, 36, 61, 0.95);
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.program:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+.program h2 {
+    margin: 0 0 10px;
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+.program p {
+    margin: 0 0 10px;
+}
+
+.program a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #2b2d42;
+    color: #ffcc00;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 1px solid #ffcc00;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+}
+
+.program a:hover {
+    background: #ff9900;
+    color: #fff;
+    border-color: #ff9900;
+    box-shadow: 0 0 15px rgba(255, 153, 0, 0.8);
+}
+
+/* Анимация для плавного появления контента */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #21243d;
+    color: #aaa;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ff9900;
+}
+
+/* Стили для страницы с описанием программ */
+.description {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(33, 36, 61, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.description h1 {
+    color: #ffcc00;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.description ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.description ul li {
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.description ul li::before {
+    content: '\2022';
+    color: #ffcc00;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.description img {
+    display: block;
+    max-width: 100%;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.description a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background: #2b2d42;
+    color: #ffcc00;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 1px solid #ffcc00;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.description a:hover {
+    background: #ff9900;
+    color: #fff;
+    border-color: #ff9900;
+}
+
+.description .info-block {
+    background: rgba(43, 45, 66, 0.8);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.description .info-block:hover {
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.8);
+    transform: scale(1.02);
+}
+
+.description .info-block h2 {
+    color: #ffcc00;
+    margin-bottom: 15px;
+}
+
+.description .info-block p {
+    margin: 0 0 10px;
+}
+body {
+  will-change: background-position;
+}
+/* Стили для блоков программ */
+.program {
+    background: rgba(33, 36, 61, 0.95);
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Эффект при наведении на блоки программ */
+.program:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 12px rgba(255, 204, 0, 0.9);
+}
+
+/* Эффект для ссылок в блоках программ */
+.program a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #2b2d42;
+    color: #ffcc00;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 1px solid #ffcc00;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+}
+
+.program a:hover {
+    background: #ff9900;
+    color: #fff;
+    border-color: #ff9900;
+    box-shadow: 0 0 18px rgba(255, 153, 0, 0.9);
+}
+.intro {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(33, 36, 61, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    animation: floatLR 3s ease-in-out infinite;
+}
+
+@keyframes floatLR {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.intro h2 {
+    margin: 0 0 20px;
+    color: #ffcc00;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.intro p {
+    margin: 0 0 20px;
+    font-size: 1.1em;
+}
+
+.intro img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cta-container {
+    text-align: center;
+    margin-top: 20px;
+    background-color: #2b2d42; /* Фон надписи */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cta {
+    font-size: 1.2em;
+    color: #d4d4dc;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(255, 204, 0, 0.8);
+    transition: color 0.3s ease;
+}
+
+.cta:hover {
+    color: #ff9900;
+}
+/* Скрываем логотип по умолчанию */
+.program .logo {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+}
+
+.program {
+    position: relative;
+}
+
+/* При наведении на блок программы показываем логотип */
+.program:hover .logo {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.program .logo img {
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+/* Для контейнера с частицами */
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  /* Для самих частиц */
+  .particle {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: fly 10s linear infinite;
+    opacity: 0.8;
+  }
+  
+  /* Анимация движения */
+  @keyframes fly {
+    0% {
+      transform: translateY(0) translateX(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) translateX(calc(-50px + 100px * var(--direction)));
+      opacity: 0;
+    }
+  }
+  
+  /* Настройки разных частиц */
+  .particle:nth-child(1) {
+    top: -5%;
+    left: 20%;
+    animation-duration: 8s;
+    animation-delay: 0s;
+    --direction: -0.2;
+  }
+  
+  .particle:nth-child(2) {
+    top: -10%;
+    left: 50%;
+    animation-duration: 10s;
+    animation-delay: 2s;
+    --direction: 0.3;
+  }
+  
+  .particle:nth-child(3) {
+    top: -5%;
+    left: 70%;
+    animation-duration: 6s;
+    animation-delay: 1s;
+    --direction: -0.1;
+  }
+  
+  .particle:nth-child(4) {
+    top: -10%;
+    left: 90%;
+    animation-duration: 12s;
+    animation-delay: 3s;
+    --direction: 0.4;
+  }
+  
+  .particle:nth-child(5) {
+    top: -5%;
+    left: 30%;
+    animation-duration: 7s;
+    animation-delay: 1.5s;
+    --direction: -0.3;
+  }
+  
+/* Общие стили для столбов */
+.side-column {
+    position: fixed;
+    top: -100%;
+    width: 100px;
+    height: 100%;
+    background: rgba(43, 45, 66, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    pointer-events: none;
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+/*Левый столб */
+.left-column {
+    left: 130px;
+}
+
+/* Правый столб */
+.right-column {
+    right: 130px;
+}
+
+/* Анимация для появления столбов */
+@keyframes slideIn {
+    0% {
+        top: -100%; 
+    }
+    100% {
+        top: 0;
+    }
+}
